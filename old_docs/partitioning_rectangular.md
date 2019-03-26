@@ -18,7 +18,7 @@ using Plots
 ```
 
 ```@example rectangular_partitions
-E = customembed(rand(3, 100))
+E = cembed(rand(3, 100))
 ```
 
 ## Hyper-rectangles by subdivision of axes (`ϵ::Int`)

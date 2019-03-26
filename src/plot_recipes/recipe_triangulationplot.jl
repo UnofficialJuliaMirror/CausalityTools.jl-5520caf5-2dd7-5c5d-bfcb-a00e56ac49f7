@@ -2,7 +2,7 @@ include("helperfunctions_triangulationgrid.jl")
 
 import StateSpaceReconstruction:
 	DelaunayTriangulation,
-	customembed
+	cembed
 
 @recipe function plot_triang(original_pts, DT::DelaunayTriangulation;
             plot_states = true,
@@ -71,7 +71,7 @@ import StateSpaceReconstruction:
             mc_fillpoints = :black,
             sample_randomly = true
     )
-    fulltriang = DelaunayTriangulation(customembed(original_pts))
+    fulltriang = DelaunayTriangulation(cembed(original_pts))
     n_simplices_full = size(fulltriang.indices, 2)
     n_simplices = size(DT.indices, 2)
     n_points = maximum(size(pts))

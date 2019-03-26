@@ -19,8 +19,8 @@ y = sin.(cumsum(rand(300)))*0.3 .+ x
 
 τ = 1 # embedding lag
 ν = 1 # forward prediction lag
-E_xtoy = customembed([x, y], [2, 2, 2, 1], [ν, 0, -τ, 0])
-E_ytox = customembed([y, x], [2, 2, 2, 1], [ν, 0, -τ, 0])
+E_xtoy = cembed([x, y], [2, 2, 2, 1], [ν, 0, -τ, 0])
+E_ytox = cembed([y, x], [2, 2, 2, 1], [ν, 0, -τ, 0])
 
 # Organize marginals
 Tf = [1]     # target, future

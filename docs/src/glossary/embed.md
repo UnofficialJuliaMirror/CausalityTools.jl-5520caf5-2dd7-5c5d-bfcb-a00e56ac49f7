@@ -11,7 +11,7 @@ usage, you may not need to think about embeddings at all. It is highly recommend
 to try and understand the algorithms. For that, you need to manually perform delay embeddings.
 
 ## Customized embeddings
-To construct embeddings from data, you can use the `customembed(data, positions, lags)`
+To construct embeddings from data, you can use the `cembed(data, positions, lags)`
 function.
 
 The first argument `data` is the dataset, and may a matrix where either the columns or
@@ -39,9 +39,9 @@ variables ``x_1, x_2, \ldots, x_n``.
 
 | Embedding | Code |
 |-----------|------|
-|``\left{ (x_1(t+3), x_1(t+1), x_1(t), x_2(t), x_2(t-3)) \right}`` | `customembed(data, [1, 1, 1, 2, 2], [3, 1, 0, 0, -3]` |
-| ``\left{ (x_1(t), x_2(t), x_3(t)) \right}`` | `customembed(data, [1, 2, 3], [0, 0, 0]` |
-| ``\left{ (x_4(t+5), x_3(t-2), x_6(t-8), x_1(t+1)) \right}`` | `customembed(data, [4, 3, 6, 1], [5, -2, -8, 1])` |
+|``\left{ (x_1(t+3), x_1(t+1), x_1(t), x_2(t), x_2(t-3)) \right}`` | `cembed(data, [1, 1, 1, 2, 2], [3, 1, 0, 0, -3]` |
+| ``\left{ (x_1(t), x_2(t), x_3(t)) \right}`` | `cembed(data, [1, 2, 3], [0, 0, 0]` |
+| ``\left{ (x_4(t+5), x_3(t-2), x_6(t-8), x_1(t+1)) \right}`` | `cembed(data, [4, 3, 6, 1], [5, -2, -8, 1])` |
 
 
 This way of constructing embeddings is very useful when computing, for example, transfer
@@ -53,4 +53,4 @@ understanding the algorithm, rather than blindly accepting that it works).
 Embeddings may also be constructed using the `embed` or `reconstruct` functions from
 [DynamicalSystems.jl](https://juliadynamics.github.io/DynamicalSystems.jl/latest/).
 However, for many of the algorithms we need a bit more flexibility when constructing our
-state space reconstructions, which is what `customembed` is for.
+state space reconstructions, which is what `cembed` is for.

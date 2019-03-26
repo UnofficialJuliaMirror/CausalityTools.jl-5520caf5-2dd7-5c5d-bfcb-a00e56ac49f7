@@ -2,6 +2,7 @@ using DynamicalSystems
 using CausalityTools
 using Plots
 plotlyjs()
+import PerronFrobenius: TransferOperatorRectangularBinning
 
 s = DynamicalSystems.Systems.coupledstandardmaps(2)
 ts_length = 500
@@ -206,7 +207,7 @@ end
     end
 end
 
-@recipe function f(r::RectangularBinningTransferOperator)
+@recipe function f(r::TransferOperatorRectangularBinning)
     seriestype  :=  :heatmap
     xlabel --> "state #i"
     ylabel --> "state #j"

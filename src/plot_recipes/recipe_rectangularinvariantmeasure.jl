@@ -1,4 +1,4 @@
-import PerronFrobenius.RectangularInvariantMeasure
+import PerronFrobenius: RectangularInvariantMeasure
 
 @recipe function f(riv::RectangularInvariantMeasure;
                     boxfillfactor::Int = 3, linesegments = true,

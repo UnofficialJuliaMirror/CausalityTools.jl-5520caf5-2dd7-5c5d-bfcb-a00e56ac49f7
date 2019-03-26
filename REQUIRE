@@ -1,5 +1,5 @@
 julia 1.0
-CausalityToolsBase
+CausalityToolsBase 0.3.1
 AbstractFFTs
 Conda
 InplaceOps
@@ -10,15 +10,15 @@ DynamicalSystemsBase
 DynamicalSystems
 NearestNeighbors
 Interpolations
-PerronFrobenius 0.2.0 0.2.4
+PerronFrobenius 0.4.0
 PyCall
 RecipesBase
 Reexport
-Simplices 0.2.1
+Simplices 0.4.0
 StaticArrays
-StateSpaceReconstruction 0.3.0 0.3.2
+StateSpaceReconstruction 0.4.0
 SpecialFunctions
 TimeseriesSurrogates 0.2.1
-TransferEntropy 0.3.1 0.3.4
+TransferEntropy 0.4.0
 Measures
 CrossMappings 0.2.3 0.2.4
